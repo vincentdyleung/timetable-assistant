@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sis:</b>
+  <%= @course_section.sis_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @course_section.name %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @course_section.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @course_section.end_time %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%= @course_section.day %>
+</p>
+
+<p>
+  <b>Room:</b>
+  <%= @course_section.room %>
+</p>
+
+<p>
+  <b>Instructor:</b>
+  <%= @course_section.instructor %>
+</p>
+
+<p>
+  <b>Quota:</b>
+  <%= @course_section.quota %>
+</p>
+
+<p>
+  <b>Enroll:</b>
+  <%= @course_section.enroll %>
+</p>
+
+<p>
+  <b>Available:</b>
+  <%= @course_section.available %>
+</p>
+
+<p>
+  <b>Wait:</b>
+  <%= @course_section.wait %>
+</p>
+
+<p>
+  <b>Remark:</b>
+  <%= @course_section.remark %>
+</p>
+
+
+<%= link_to 'Edit', edit_course_section_path(@course_section) %> |
+<%= link_to 'Back', course_sections_path %>

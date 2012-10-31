@@ -1,4 +1,13 @@
 TimetableAssistant::Application.routes.draw do
+
+  resources :course_infos
+
+  resources :subjects
+
+  resources :course_sections
+
+  resources :courses
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

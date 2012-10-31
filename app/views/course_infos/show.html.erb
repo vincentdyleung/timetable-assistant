@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Previous code:</b>
+  <%= @course_info.previous_code %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @course_info.description %>
+</p>
+
+<p>
+  <b>Attributes:</b>
+  <%= @course_info.attributes %>
+</p>
+
+<p>
+  <b>Vector:</b>
+  <%= @course_info.vector %>
+</p>
+
+
+<%= link_to 'Edit', edit_course_info_path(@course_info) %> |
+<%= link_to 'Back', course_infos_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  previous_code: MyString
+  description: MyString
+  attributes: MyString
+  vector: MyString
+
+two:
+  previous_code: MyString
+  description: MyString
+  attributes: MyString
+  vector: MyString

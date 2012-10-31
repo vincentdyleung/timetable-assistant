@@ -1,0 +1,65 @@
+<%= form_for(@course_section) do |f| %>
+  <% if @course_section.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course_section.errors.count, "error") %> prohibited this course_section from being saved:</h2>
+
+      <ul>
+      <% @course_section.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sis_id %><br />
+    <%= f.number_field :sis_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.time_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.time_select :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br />
+    <%= f.text_field :day %>
+  </div>
+  <div class="field">
+    <%= f.label :room %><br />
+    <%= f.text_field :room %>
+  </div>
+  <div class="field">
+    <%= f.label :instructor %><br />
+    <%= f.text_field :instructor %>
+  </div>
+  <div class="field">
+    <%= f.label :quota %><br />
+    <%= f.number_field :quota %>
+  </div>
+  <div class="field">
+    <%= f.label :enroll %><br />
+    <%= f.number_field :enroll %>
+  </div>
+  <div class="field">
+    <%= f.label :available %><br />
+    <%= f.number_field :available %>
+  </div>
+  <div class="field">
+    <%= f.label :wait %><br />
+    <%= f.number_field :wait %>
+  </div>
+  <div class="field">
+    <%= f.label :remark %><br />
+    <%= f.text_field :remark %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

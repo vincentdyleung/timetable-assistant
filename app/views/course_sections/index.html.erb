@@ -1,0 +1,45 @@
+<h1>Listing course_sections</h1>
+
+<table>
+  <tr>
+    <th>Sis</th>
+    <th>Name</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Day</th>
+    <th>Room</th>
+    <th>Instructor</th>
+    <th>Quota</th>
+    <th>Enroll</th>
+    <th>Available</th>
+    <th>Wait</th>
+    <th>Remark</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @course_sections.each do |course_section| %>
+  <tr>
+    <td><%= course_section.sis_id %></td>
+    <td><%= course_section.name %></td>
+    <td><%= course_section.start_time %></td>
+    <td><%= course_section.end_time %></td>
+    <td><%= course_section.day %></td>
+    <td><%= course_section.room %></td>
+    <td><%= course_section.instructor %></td>
+    <td><%= course_section.quota %></td>
+    <td><%= course_section.enroll %></td>
+    <td><%= course_section.available %></td>
+    <td><%= course_section.wait %></td>
+    <td><%= course_section.remark %></td>
+    <td><%= link_to 'Show', course_section %></td>
+    <td><%= link_to 'Edit', edit_course_section_path(course_section) %></td>
+    <td><%= link_to 'Destroy', course_section, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Course section', new_course_section_path %>

@@ -1,0 +1,29 @@
+<h1>Listing course_infos</h1>
+
+<table>
+  <tr>
+    <th>Previous code</th>
+    <th>Description</th>
+    <th>Attributes</th>
+    <th>Vector</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @course_infos.each do |course_info| %>
+  <tr>
+    <td><%= course_info.previous_code %></td>
+    <td><%= course_info.description %></td>
+    <td><%= course_info.attributes %></td>
+    <td><%= course_info.vector %></td>
+    <td><%= link_to 'Show', course_info %></td>
+    <td><%= link_to 'Edit', edit_course_info_path(course_info) %></td>
+    <td><%= link_to 'Destroy', course_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Course info', new_course_info_path %>
