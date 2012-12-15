@@ -41,6 +41,9 @@ class CoursesController < ApplicationController
   # POST /courses.json
   def create
     @course = Course.new(params[:course])
+    if !params[:subject].nil?
+      @course.subject_id = Subject.find_by_code(params[:subject]).id
+    end
 
     respond_to do |format|
       if @course.save

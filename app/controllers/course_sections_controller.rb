@@ -41,7 +41,24 @@ class CourseSectionsController < ApplicationController
   # POST /course_sections.json
   def create
     @course_section = CourseSection.new(params[:course_section])
-
+    subject_id = Subject.find_by_code(params[:subject]).id
+    @course_section.course_id = Course.find_by_subject_id_and_code(subject_id, params[:code]).id
+    @course_section.instructor = params[:instructors].split(";")
+    if !params[:day].nil?
+      @course_section.day = params[:day].split(";")
+    end
+    if !params[:start_time].nil?
+      @course_section.start_time = params[:start_time].split(";")
+    end
+    if !params[:end_time].nil?
+      @course_section.end_time = params[:end_time].split(";")
+    end
+    if !params[:date_range].nil?
+      @course_section.date_range = params[:date_range].split(";")
+    end
+    if !params[:room].nil?
+      @course_section.room = params[:room].split(";")
+    end
     respond_to do |format|
       if @course_section.save
         format.html { redirect_to @course_section, notice: 'Course section was successfully created.' }
